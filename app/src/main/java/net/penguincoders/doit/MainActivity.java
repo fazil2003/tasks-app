@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         fab = findViewById(R.id.fab);
 
         taskList = db.getAllTasks();
-        Collections.reverse(taskList);
+        // Collections.reverse(taskList);
 
         tasksAdapter.setTasks(taskList);
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
     @Override
     public void handleDialogClose(DialogInterface dialog){
         taskList = db.getAllTasks();
-        Collections.reverse(taskList);
+        // Collections.reverse(taskList);
         tasksAdapter.setTasks(taskList);
         tasksAdapter.notifyDataSetChanged();
     }
